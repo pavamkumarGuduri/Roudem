@@ -1,0 +1,145 @@
+.low{
+    color: green;
+}
+.medium{
+    color:yellow
+}
+.high{
+    color:red
+}
+
+.bHigh{
+background-color:green;
+}
+
+
+/* Styling the form container */
+form {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+  }
+  
+  /* Styling the form header */
+  h1 {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  /* Styling the labels */
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-family: Arial, sans-serif;
+    color: #555;
+  }
+  
+  /* Styling the input field */
+  input#nameInput {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Styling the registration button */
+  button.regbut {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Adding hover effect to the button */
+  button.regbut:hover {
+    background-color: #45a049;
+  }
+  
+  /* Styling the list */
+  ol {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 0;
+    list-style-type: decimal;
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  ol li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  
+  /* -------------------------------- */
+/* Styling the cart container */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+    margin: 0;
+  }
+  
+  .cartd {
+    max-width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+  
+  /* Styling the labels */
+  label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+  }
+  
+  /* Styling the inputs */
+  input {
+    width: calc(100% - 22px); /* Adjust width for padding and border */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Ensure padding and border are included in width calculation */
+  }
+  
+  /* Styling the add to cart button */
+  button.cartbut {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #179f1c;
+    color: rgb(5, 197, 101);
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  /* Adding hover effect to the button */
+  button.cartbut:hover {
+    background-color: #45a049;
+  }
+  
+  

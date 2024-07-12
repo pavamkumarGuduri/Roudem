@@ -1,0 +1,55 @@
+/* You can add global styles to this file, and also import other style files */
+
+body{
+    margin: 0px;
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0 2px 15px rgba(64, 64, 64, 0.1);
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+  }
+
+  th, td {
+    padding: 12px 15px;
+    text-align: left;
+  }
+
+  th {
+    background-color: #009879;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  tr {
+    border-bottom: 1px solid #dddddd;
+  }
+
+  tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+  }
+
+  tr:last-of-type {
+    border-bottom: 2px solid #009879;
+  }
+
+  tr:hover {
+    background-color: #f1f1f1;
+  }
+
+  /* Price cell color variations */
+  .low {
+    color: green;
+  }
+
+  .medium {
+    color: orange;
+  }
+
+  .high {
+    color: red;
+  }

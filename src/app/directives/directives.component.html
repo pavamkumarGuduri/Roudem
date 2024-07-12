@@ -1,0 +1,74 @@
+<p>directives works!</p>
+
+<!-- ng for -->
+<h5 *ngFor="let age of ages">Age is :{{age}}</h5>
+
+<!-- ng for with index -->
+<h5 *ngFor="let age of ages;let i=index">person{{i+1}} age is {{age}}</h5>
+
+<!-- unorder list concept -->
+ <ul>
+    <li *ngFor="let state of states"> {{state}}</li>
+ </ul>
+<!-- odrederd list -->
+ <ol>
+    <li *ngFor="let state of states">{{state}}</li>
+ </ol>
+
+ <!-- drop down -->
+  <label for="">States:</label>
+  <select name="" id="">
+    <option *ngFor="let state of states">{{state}}</option>
+  </select>
+
+  <h5 *ngFor="let product of products">{{product.name}} price is {{product.price}} and ratong is{{product.rating}} </h5>
+
+  <!-- table creation -->
+   <table border="1">
+    <thead>
+        <tr>
+        <th>   NAME </th>
+        <th>    PRICE</th>
+        <th> RATING</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products">
+
+            <td>{{product.name}}</td>
+            <td>{{product.price}}</td>
+            <td>{{product.rating}}</td>
+        </tr>
+    </tbody>
+   </table>
+
+<!-- checking If condition -->
+ <button *ngIf="true">submit</button>
+ <button *ngIf="false">cancel</button>
+ <button *ngIf="true">clear</button>
+
+ <!-- alternative directives -->
+  <!-- table creation -->
+  <table border="1">
+    <thead>
+        <tr>
+        <th>   NAME </th>
+        <th>    PRICE</th>
+        <th> RATING</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products">
+
+            <td>{{product.name}}</td>
+
+            <!-- by using prices we can apply colors to to the price variation low, medium , high -->
+            <td [ngClass]="{'low':product.price>20,'medium':product.price>20 && product.price<=100,'high':product.price<100}">{{product.price}}</td>
+
+            <!-- by using rating give a color variation to the rating cells -->
+            <td [ngStyle]="{'color':product.rating>4?'red':'blue'}">{{product.rating}}</td>
+
+            
+        </tr>
+    </tbody>
+   </table>

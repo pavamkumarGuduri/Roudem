@@ -1,0 +1,69 @@
+/* General styles for the dashboard layout */
+.dashboard {
+    display: flex;
+    height: 100vh;
+    background-color: #f0f0f0;
+  }
+  
+  /* Styles for the navigation sidebar */
+  .dashboard nav {
+    width: 200px;
+    background-color: #333;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dashboard nav h2 {
+    font-size: 18px;
+    color: #fff;
+    margin: 10px 0;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+  }
+  
+  .dashboard nav h2:hover {
+    background-color: #555;
+  }
+  
+  .dashboard nav h2.active {
+    background-color: #007bff;
+  }
+  
+  /* Styles for the logout button */
+  .dashboard nav button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #d9534f;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .dashboard nav button:hover {
+    background-color: #c9302c;
+  }
+  
+  /* Styles for the main content area */
+  .dashboard .content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+  }
+  
+  /* Ensures router-outlet takes up full height of content area */
+  .dashboard .content router-outlet {
+    height: 100%;
+  }
+  

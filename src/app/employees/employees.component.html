@@ -1,0 +1,68 @@
+<h1>Employee Table</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>name</th>
+            <th>age</th>
+            <th>DOB</th>
+            <th>experience</th>
+            <th>package</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of employees" [ngClass]="{'bHigh':employee.package>10}">
+
+            <td>{{employee.name}}</td>
+            <td>{{employee.age}}</td>
+            <td>{{employee.dob | date:'yyyy-MM-dd'}}</td>
+            <td [ngClass]="{'low':employee.experience<3,'medium':employee.experience>=3 && employee.experience<=5,'high':employee.experience>5}">{{employee.experience}}</td>
+            <td>{{employee.package}}</td>
+            </tr>
+    </tbody>
+</table>
+
+
+<br>
+
+<h1>Event Registration</h1>
+<form >
+  <label for="nameInput">Name:</label>
+  <input type="text" id="nameInput" [(ngModel)]="nlist" name="name" placeholder="Enter content here..." required>
+  <button type="submit" class="regbut" (click)="reg()" >Register</button>
+</form>
+
+<ol>
+  <li *ngFor="let nlist of nlists">{{nlist }}</li>
+</ol>
+
+<div class="cartd">
+<h1> cart </h1>
+<label for="cartlab">Name:</label>
+<input type="text"  [(ngModel)]="newitems.name1" placeholder="Enter nameInput here..." required>
+<label for="cartlab">Price:</label>
+<input type="text"  [(ngModel)]="newitems.price1" placeholder="Enter nameInput here..." required>
+<label for="cartlab">Rating:</label>
+<input type="text"  [(ngModel)]="newitems.rating1" placeholder="Enter nameInput here..." required>
+<button class="cartut" (click)="add()">add to cart</button>
+</div>
+
+
+
+<table>
+  <thead>
+      <tr>
+          <th>name</th>
+          <th>Price</th>
+          <th>Rating</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let item of items">
+
+          <td>{{item.name1}}</td>
+          <td>{{item.price1}}</td>
+          <td>{{item.rating1}}</td>
+          </tr>
+  </tbody>
+</table>
