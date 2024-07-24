@@ -1,0 +1,11 @@
+body{
+    background-color: rgb(218, 207, 207);
+}
+
+.ff{
+    background-color: rgb(223, 221, 221);
+    width: 100%;
+    height: 15vh;
+    text-align: center;
+    display: block;
+}

@@ -1,14 +1,15 @@
 /* General styles for the dashboard layout */
 .dashboard {
     display: flex;
-    height: 100vh;
+    height: auto;
     background-color: #f0f0f0;
   }
   
   /* Styles for the navigation sidebar */
   .dashboard nav {
     width: 200px;
-    background-color: #333;
+    /* background-color: #333; */
+    background-color:rgb(218, 228, 245);
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -19,7 +20,7 @@
   
   .dashboard nav h2 {
     font-size: 18px;
-    color: #fff;
+    color: #0d0505e2;
     margin: 10px 0;
     padding: 10px;
     text-align: center;
@@ -29,11 +30,11 @@
   }
   
   .dashboard nav h2:hover {
-    background-color: #555;
+    background-color: #c2b5b5;
   }
   
   .dashboard nav h2.active {
-    background-color: #007bff;
+    background-color: #b6d3f1;
   }
   
   /* Styles for the logout button */

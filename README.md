@@ -25,3 +25,31 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+let products=[
+{name:'pen',price:20,rating:5},
+{name:'choclet',price:60,rating:3},
+{name:'pepsi',price:10,rating:4},
+{name:'thumsup',price:100,rating:3},
+{name:'x90',price:160,rating:5}
+];
+
+//filter
+products=products.filter(product=> product.price<100)
+
+//sort
+products=products.sort((a,b)=>a.price-b.price);
+
+//reduce
+let totalPrice=products.reduce((sum,a)=>sum+a.price,0);
+
+//map
+let productprices=products.map(product=>product.price+5);
+console.log(productprices);
+
+products=products.map(product=>{
+product.price=product.price+5;
+return product;
+})
+
+console.log(products,totalPrice);

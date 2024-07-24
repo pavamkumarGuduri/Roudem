@@ -9,6 +9,7 @@ export class DirectivesComponent implements OnInit {
 
   public ages:number []=[10,20,30,50,60];
 public states:string[]=['andhrapradesh','telangana','behar','madyapradesh'];
+
 public products:any=[
 {name:'pen',price:20,rating:5},
 {name:'choclet',price:60,rating:3},

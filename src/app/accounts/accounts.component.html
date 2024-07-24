@@ -1,0 +1,23 @@
+
+<table>
+    <thead>
+        <tr>
+            <th>account_name</th>
+            <th>available_balance</th>
+            <th>account_number</th>
+            <th>city</th>
+            <th>profie_picture</th> 
+            <th>id</th>  
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let Account of Accounts">
+            <td>{{Account.account_name}}</td>
+            <td>{{Account.available_balance}}</td>
+            <td>{{Account.account_number}}</td>
+            <td>{{Account.city}}</td>
+            <td><img src="{{Account.profie_picture}}" alt="" width="100px"></td>
+            <td>{{Account.id}}</td>
+        </tr>
+    </tbody>
+</table>

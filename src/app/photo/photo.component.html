@@ -1,0 +1,9 @@
+<tr *ngFor="let photo of photos">
+    <div  class="ff"> {{photo.name}}
+        <br>
+        width:{{photo.width}}
+        <br>
+        height:{{photo.height}}
+    </div>
+    <div><img src="{{photo.url}}" alt="" width="{{photo.width}}" height="{{photo.height}}"></div>
+</tr>

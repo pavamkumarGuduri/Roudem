@@ -1,0 +1,4 @@
+<tr *ngFor="let mail of mails" class="cc" [ngClass]="{'yes':mail.completed==true}">
+    <td >{{mail.id}}</td>
+    <td>{{mail.title}}</td>
+</tr>
