@@ -9,6 +9,8 @@ import { AccountsService } from '../accounts.service';
 export class AccountsComponent implements OnInit {
 
   public Accounts:any=[];
+  public term:string="";
+  
   constructor(private _accountsService:AccountsService) { 
 
     _accountsService.getAccounts().subscribe(
@@ -16,12 +18,34 @@ export class AccountsComponent implements OnInit {
         this.Accounts=data;
       },
       (err:any)=>{
-        alert("internal server error...")
+        alert("internal server error...");
       }
     )
   }
 
   ngOnInit(): void {
   }
+  filter(){
+    this._accountsService.getFilter(this.term).subscribe(
+    (data:any)=>{
+     this.Accounts=data;
+    },
+    (err:any)=>{
+      alert("internal server error...!!");
+    }
+    )
+  }
 
+  delete(id:string){
+    this._accountsService.deleteAccount(id).subscribe(
+      (data:any)=>{
+        alert("deleted succuessfully!!!");
+        location.reload();
+       },
+       (err:any)=>{
+        alert("internal server error...");
+       }
+
+    )
+  }
 }

@@ -1,23 +1,43 @@
+<input
+  type="search"
+  placeholder="search for account"
+  [(ngModel)]="term"
+  (keyup)="filter()"
+/>
 
 <table>
-    <thead>
-        <tr>
-            <th>account_name</th>
-            <th>available_balance</th>
-            <th>account_number</th>
-            <th>city</th>
-            <th>profie_picture</th> 
-            <th>id</th>  
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let Account of Accounts">
-            <td>{{Account.account_name}}</td>
-            <td>{{Account.available_balance}}</td>
-            <td>{{Account.account_number}}</td>
-            <td>{{Account.city}}</td>
-            <td><img src="{{Account.profie_picture}}" alt="" width="100px"></td>
-            <td>{{Account.id}}</td>
-        </tr>
-    </tbody>
+  <thead>
+    <tr>
+      <th>account_name</th>
+      <th>available_balance</th>
+      <th>account_number</th>
+      <th>city</th>
+      <th>profie_picture</th>
+      <th>id</th>
+      <th>Actions</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let Account of Accounts">
+      <td>{{ Account.account_name }}</td>
+      <td>{{ Account.available_balance }}</td>
+      <td>{{ Account.account_number }}</td>
+      <td>{{ Account.city }}</td>
+      <td><img src="{{ Account.profie_picture }}" alt="" width="100px" /></td>
+      <td>{{ Account.id }}</td>
+      <td>
+        <button routerLink="/dashboard/account-details/{{ Account.id }}" >
+          view
+        </button>
+        <button
+          class="red-button"
+          routerLink="/dashboard/edit-account/{{ Account.id }}"
+        >
+          edit
+        </button>
+        <button class="red-button" (click)="delete(Account.id)">delete</button>
+      </td>
+    </tr>
+  </tbody>
 </table>

@@ -1,0 +1,35 @@
+<div class="id-card-container">
+  <h1>{{ id ? "Edit student ID card" : "Create Student ID Card" }}</h1>
+  <form [formGroup]="studentForm">
+    <label for="">Student Name:</label>
+    <input type="text" formControlName="name" />
+
+    <label for="">Student Phone:</label>
+    <input type="tel" formControlName="phone" />
+
+    <label for="">Student City:</label>
+    <input type="text" formControlName="city" />
+
+    <label for="">DOB:</label>
+    <input type="date" formControlName="dob" />
+
+    <label for="">Profile Pic URL:</label>
+    <input type="text" formControlName="profile_picture" />
+
+    <label for="">Email:</label>
+    <input type="text" formControlName="email" />
+
+    <label for="">School Logo URL:</label>
+    <input type="text" formControlName="school_logo" />
+
+    <label for="">School Name:</label>
+    <input type="text" formControlName="school_name" />
+
+    <label for="">School City:</label>
+    <input type="text" formControlName="school_city" />
+
+    <label for="">School Pin-Code:</label>
+    <input type="number" formControlName="school_pin" />
+  </form>
+  <button type="submit" (click)="submit()">{{ id ? "edit" : "submit" }}</button>
+</div>

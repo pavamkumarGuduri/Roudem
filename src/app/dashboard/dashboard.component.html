@@ -1,31 +1,42 @@
-
 <div class="dashboard">
-    <nav>
-      <h2 routerLink="welcome" routerLinkActive="active">Welcome</h2>
-      <h2 routerLink="home" routerLinkActive="active">Home</h2>
-      <h2 routerLink="about" routerLinkActive="active">About</h2>
-      <h2 routerLink="calculator" routerLinkActive="active">calculator</h2>
-      <h2 routerLink="rectangle" routerLinkActive="active">Rectangle</h2>
-      <h2 routerLink="circle" routerLinkActive="active">Circle</h2>
-      <h2 routerLink="bmi" routerLinkActive="active">BMI</h2>
-      <h2 routerLink="directives" routerLinkActive="active">Directives</h2>
-      <h2 routerLink="pipes" routerLinkActive="active">Pipes</h2>
-      <h2 routerLink="employees" routerLinkActive="active">Employees</h2>
-      <h2 routerLink="flipcart" routerLinkActive="active">flipcart</h2>
-      <h2 routerLink="employee-chat" routerLinkActive="active"> Employee-Chat</h2>
-      <h2 routerLink="vehicle" routerLinkActive="active">Vehicle</h2>
-      <h2 routerLink="Accounts" routerLinkActive="active">Accounts</h2>
-      <h2 routerLink="myntra" routerLinkActive="active">Myntra</h2>
-      <h2 routerLink="Mails" routerLinkActive="active">Mails</h2>
-      <h2 routerLink="Reload" routerLinkActive="active">Reload</h2>
-      <h2 routerLink="photo" routerLinkActive="active">Photos</h2>
-       <h2 routerLink="create-vehicle" routerLinkActive="active">create-vehicle</h2>
+  <nav>
+    <h2 routerLink="welcome" routerLinkActive="active">Welcome</h2>
+    <h2 routerLink="home" routerLinkActive="active">Home</h2>
+    <h2 routerLink="about" routerLinkActive="active">About</h2>
+    <h2 routerLink="calculator" routerLinkActive="active">calculator</h2>
+    <h2 routerLink="rectangle" routerLinkActive="active">Rectangle</h2>
+    <h2 routerLink="circle" routerLinkActive="active">Circle</h2>
+    <h2 routerLink="bmi" routerLinkActive="active">BMI</h2>
+    <h2 routerLink="directives" routerLinkActive="active">Directives</h2>
+    <h2 routerLink="pipes" routerLinkActive="active">Pipes</h2>
+    <h2 routerLink="employees" routerLinkActive="active">Employees</h2>
+    <h2 routerLink="flipcart" routerLinkActive="active">flipcart</h2>
+    <h2 routerLink="employee-chat" routerLinkActive="active">Employee-Chat</h2>
+    <h2 routerLink="vehicle" routerLinkActive="active">Vehicle</h2>
+    <h2 routerLink="Accounts" routerLinkActive="active">Accounts</h2>
+    <h2 routerLink="myntra" routerLinkActive="active">Myntra</h2>
+    <h2 routerLink="Mails" routerLinkActive="active">Mails</h2>
+    <h2 routerLink="Reload" routerLinkActive="active">Reload</h2>
+    <h2 routerLink="photo" routerLinkActive="active">Photos</h2>
+    <h2 routerLink="create-vehicle" routerLinkActive="active">
+      create-vehicle
+    </h2>
+    <!-- <h2 routerLink="vehicle-details" routerLinkActive="active">Vehicle-Details</h2> -->
+    <h2 routerLink="create-account" routerLinkActive="active">
+      ctreate-account
+    </h2>
+    <h2 routerLink="studentIdCards" routerLinkActive="active">
+      studentIdCards
+    </h2>
+    <!-- <h2 routerLink="account-details" routerLinkActive="active"> Account-Details</h2> -->
+    <h2 routerLink="create-student-ids" routerLinkActive="active">
+      create s-ids
+    </h2>
+    <h2 routerLink="user" routerLinkActive="active">user-details</h2>
 
-      <button routerLink="/login">logout</button>
-  
-    </nav>
-    <div class="content">
-      <router-outlet></router-outlet>
-    </div>
+    <button (click)="LogOut()">logout</button>
+  </nav>
+  <div class="content">
+    <router-outlet></router-outlet>
   </div>
-  
+</div>

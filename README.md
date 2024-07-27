@@ -53,3 +53,11 @@ return product;
 })
 
 console.log(products,totalPrice);
+
+Form types:
+--------------------------
+1.FormGroup
+2.Nested FormGroup
+3.Dynamic Form
+4.FormArray
+validations

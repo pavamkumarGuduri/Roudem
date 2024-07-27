@@ -1,0 +1,127 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+.id-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Space between the cards */
+  justify-content: center; /* Center the cards */
+}
+
+.id-card {
+  width: 600px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  transition: transform 0.2s; /* Add transition for hover effect */
+  margin: 20px;
+}
+
+.id-card:hover {
+  transform: translateY(-10px); /* Slightly raise the card on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.header {
+  margin-top: 20px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+.head-1{
+  display: flex;
+  background-color: rgb(227, 230, 158);
+}
+
+.school-details {
+  margin-left: 14%;
+  margin-top: 5%;
+}
+
+.school-details p {
+  font-size: 14px;
+  margin: 5px;
+}
+
+.school-info {
+  display: flex;
+  font-size: 18px;
+  font-weight:700px;
+}
+.school-details h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.main {
+  padding: 10px;
+  margin: 20px;
+}
+
+.main p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+.btm{
+  display: flex;
+}
+.btm-pic{
+ margin-left: 70px;
+ margin-top: 20px;
+ width: 170px;
+ height: 130px;
+ background-color: rgb(194, 199, 199);
+ border-radius: 50%;
+}
+
+.btn-view {
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White text */
+  padding: 10px 20px; /* Some padding */
+  margin-right: 10px; /* Space between buttons */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer/hand icon */
+  font-size: 16px; /* Increase font size */
+}
+
+.btn-edit {
+  background-color: #2196F3; /* Blue background */
+  color: white; /* White text */
+  padding: 10px 20px; /* Some padding */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer/hand icon */
+  font-size: 16px; /* Increase font size */
+  margin-left: 15%;
+}
+.btn-delete {
+  background-color: #c42626; /* Blue background */
+  color: white; /* White text */
+  padding: 10px 20px; /* Some padding */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer/hand icon */
+  font-size: 16px; /* Increase font size */
+  margin-left: 15%;
+}
+
+.btn-view:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+.btn-edit:hover {
+  background-color: #0b7dda; /* Darker blue on hover */
+}
+.btn-delete:hover {
+  background-color: #fa060e; /* Darker blue on hover */
+}
+.btn-main{
+  margin-left:19%;
+}

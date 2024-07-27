@@ -1,0 +1,19 @@
+<p>vehicle-details works!</p>
+
+<div class="vehicle-details-card">
+  <h3>Vehicle: {{ vehicle.Vehicle }}</h3>
+  <h3>Vehicle Manufacturer: {{ vehicle.manufacturer }}</h3>
+  <h3>Vehicle Model: {{ vehicle.model }}</h3>
+  <h3>Vehicle Type: {{ vehicle.type }}</h3>
+  <h3>Fuel: {{ vehicle.fuel }}</h3>
+  <h3>Color: {{ vehicle.color }}</h3>
+  <h3>
+    <img
+      src="{{ vehicle.image }}"
+      alt="Image format not supported"
+      width="200px"
+    />
+  </h3>
+  <h3>Price: {{ vehicle.cost }}</h3>
+  <h3>ID: {{ vehicle.id }}</h3>
+</div>

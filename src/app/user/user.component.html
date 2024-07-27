@@ -1,0 +1,28 @@
+<div>
+  <h1>User registration</h1>
+  <form [formGroup]="UserForm">
+    <label for=""> Name:</label>
+    <input type="text" formControlName="name" />
+    <label for="">age:</label>
+    <input type="number" formControlName="age" />
+    <label for="">Phone:</label>
+    <input type="number" formControlName="phone" />
+    <label for="">Email:</label>
+    <input type="text" formControlName="email" />
+    <br />
+    <div formGroupName="address">
+      <label for="">city:</label>
+      <input type="text" formControlName="city" />
+      <label for="">pincode:</label>
+      <input type="number" formControlName="pincode" />
+    </div>
+    <div>
+      <label for="">Type:</label>
+      <input type="radio">
+      <label for="">DaySchool</label>
+      <input type="radio">
+      <label for=""></label>
+    </div>
+  </form>
+  <button (click)="submit()">submit</button>
+</div>

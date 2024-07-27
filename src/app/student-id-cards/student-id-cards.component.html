@@ -1,0 +1,62 @@
+<input
+  type="search"
+  placeholder="search for students"
+  [(ngModel)]="term"
+  (keyup)="filter()"
+/>
+<div class="id-card-container">
+  <div class="id-card" *ngFor="let student of StudentDetails">
+    <div class="head-1">
+      <div class="header">
+        <img
+          src="{{ student.school_logo }}"
+          alt="School Logo"
+          width="100px"
+          height="110px"
+          style="border-radius: 40%"
+        />
+      </div>
+      <div class="school-details">
+        <h1>{{ student.school_name }} School</h1>
+        <div class="school-info">
+          <p>School City:{{ student.school_city }}</p>
+          <p class="school-info-p2">S-Pin: {{ student.school_pin }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="btm">
+      <div class="main">
+        <p><strong>Id:</strong> {{ student.id }}</p>
+        <p><strong>Name:</strong> {{ student.name }}</p>
+        <p><strong>Date of Birth:</strong> {{ student.dob }}</p>
+        <p><strong>Address:</strong> {{ student.school_city }}</p>
+        <p><strong>Mobile Number:</strong> {{ student.phone }}</p>
+      </div>
+      <div class="btm-pic">
+        <img
+          src="{{ student.profile_picture }}"
+          alt="School Logo"
+          width="170px"
+          height="150px"
+          style="border-radius: 20%"
+        />
+      </div>
+    </div>
+    <div class="btn-main">
+      <button
+        class="btn-view"
+        routerLink="/dashboard/student-details/{{ student.id }}"
+      >
+        View
+      </button>
+      <button
+        class="btn-edit"
+        routerLink="/dashboard/edit-idcards/{{ student.id }}"
+      >
+        Edit
+      </button>
+      <button class="btn-delete" (click)="delete(student.id)">Delete</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<h1>{{ id ? "Edit account form" : "Create account Form" }}</h1>
+<div class="form-container">
+  <form [formGroup]="accountForm">
+    <label for="accountName">Account Name:</label>
+    <input type="text" id="accountName" formControlName="account_name" />
+
+    <label for="availableBalance">Available Balance:</label>
+    <input type="text" formControlName="available_balance" />
+
+    <label for="accountNumber">Account Number:</label>
+    <input type="text" formControlName="account_number" />
+
+    <label for="city">City:</label>
+    <input type="text" formControlName="city" />
+
+    <label for="profilePicture">Profile Picture:</label>
+    <input type="text" formControlName="profie_picture" />
+
+    <button type="submit" (click)="submit()">
+      {{ id ? "edit" : "Submit" }}
+    </button>
+    <!-- <button (click)="submit()">Submit</button> -->
+  </form>
+</div>

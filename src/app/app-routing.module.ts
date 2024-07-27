@@ -21,10 +21,19 @@ import { MailsComponent } from './mails/mails.component';
 import { ReloadComponent } from './reload/reload.component';
 import { PhotoComponent } from './photo/photo.component';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
+import { StudentIdCardsComponent } from './student-id-cards/student-id-cards.component';
+import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
+import { CreateAccountComponent } from './create-account/create-account.component';
+import { AccountDetailsComponent } from './account-details/account-details.component';
+import { CreateStudentIdsComponent } from './create-student-ids/create-student-ids.component';
+import { StudentDetailsComponent } from './student-details/student-details.component';
+import { AuthenticationGuard } from './authentication.guard';
+import { UserComponent } from './user/user.component';
+
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
-  { path: 'dashboard', component: DashboardComponent, children:[
+  { path: 'dashboard',canActivate:[AuthenticationGuard],component: DashboardComponent, children:[
   { path: 'welcome', component: WelcomeComponent },
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
@@ -43,7 +52,17 @@ const routes: Routes = [
   {path:'Mails',component:MailsComponent},
   {path:'Reload',component:ReloadComponent},
   {path:'photo',component:PhotoComponent},
-  {path:'create-vehicle',component:CreateVehicleComponent}
+  {path:'create-vehicle',component:CreateVehicleComponent},
+  {path:'vehicle-details/:id',component:VehicleDetailsComponent},
+  {path:'edit-vehicle/:id',component:CreateVehicleComponent},
+  {path:'create-account',component:CreateAccountComponent},
+  {path:'account-details/:id',component:AccountDetailsComponent},
+  {path:'edit-account/:id',component:CreateAccountComponent},
+  {path:'studentIdCards',component:StudentIdCardsComponent},
+  {path:'create-student-ids',component:CreateStudentIdsComponent},
+  {path:'edit-idcards/:id',component:CreateStudentIdsComponent},
+  {path:'student-details/:id',component:StudentDetailsComponent},
+  {path:'user',component:UserComponent}
 ]},
 
 { path: '', redirectTo: 'login', pathMatch: 'full' } // Add this to redirect to login by default
