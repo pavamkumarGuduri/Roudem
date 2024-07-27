@@ -13,20 +13,36 @@ export class UserComponent implements OnInit {
     age:new FormControl(),
     phone:new FormControl(),
     email:new FormControl(),
-    address:new FormControl({
+    address:new FormGroup({
         city:new FormControl(),
         pincode:new FormControl()
-      }
-    )
-
+      }),
+      type:new FormControl(),
+      // busFee:new FormControl(),
+      // hostelFee:new FormControl()
   })
-  constructor() { }
+  constructor() {
+    this.UserForm.get('type')?.valueChanges.subscribe(
+      (data:any)=>{
+
+if(data=='DayScholor'){
+ //add busfee
+ this.UserForm.addControl('busFee',new FormControl());
+ this.UserForm.removeControl('hostelfee')
+      }
+      else if(data=='residentioal'){
+        //add hostel fee
+this.UserForm.addControl('hostelFee', new FormControl());
+this.UserForm.removeControl('busFee');
+      }
+    }
+    )
+   }
 
   ngOnInit(): void {
   }
 
   submit(){
     console.log(this.UserForm);
-    location.reload();
   }
 }

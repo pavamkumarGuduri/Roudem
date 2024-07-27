@@ -18,10 +18,30 @@
     </div>
     <div>
       <label for="">Type:</label>
-      <input type="radio">
-      <label for="">DaySchool</label>
-      <input type="radio">
-      <label for=""></label>
+      <input
+        type="radio"
+        name="type"
+        formControlName="type"
+        value="DayScholor"
+      />
+      <label for="">DayScolor</label>
+      <input
+        type="radio"
+        name="type"
+        formControlName="type"
+        value="residentioal"
+      />
+      <label for="">Residentioal</label>
+      <br />
+      <div *ngIf="UserForm.get('type')?.value == 'DayScholor'">
+        <label for="">Bus Fee</label>
+        <input type="number" formControlName="busFee" />
+      </div>
+      <br />
+      <div *ngIf="UserForm.get('type')?.value == 'residentioal'">
+        <label for="">Hostel Fee</label>
+        <input type="number" formControlName="hostelFee" />
+      </div>
     </div>
   </form>
   <button (click)="submit()">submit</button>
