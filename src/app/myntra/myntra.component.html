@@ -1,41 +1,74 @@
 <div class="one">
-<div class="universal">
+  <div class="universal">
     <!-- <h1>filters</h1> -->
     <h2>Category</h2>
-            <input type="checkbox" name="category" value="men's clothing" >
-            Men's Clothing
-        <br>
-            <input type="checkbox" name="category" value="jewelery">
-            Jewelry
-        <br>
-            <input type="checkbox" name="category" value="electronics">
-            Electronics
-        <br>
-            <input type="checkbox" name="category" value="womens_clothing">
-            Women's Clothing
-        <br>
-            <h2>Price</h2>
-            <input type="checkbox" name="category" value="mens_clothing" (click)="sortByLowToHigh100()">
-            Rs.10 to 100
-        <br>
-            <input type="checkbox" name="category" value="jewelery" (click)="sortByLowToHigh300()">
-            Rs.100 to 300
-         <br>
-            <input type="checkbox" name="category" value="electronics" (click)="sortByLowToHigh500()">
-            Rs.300 to 500
-        <br>
-            <input type="checkbox" name="category" value="womens_clothing" (click)="sortByLowToHigh1000()">
-            Rs.500 to 1000
-</div>
-<div class="container">
+    <input type="checkbox" name="category" value="men's clothing" />
+    Men's Clothing
+    <br />
+    <input type="checkbox" name="category" value="jewelery" />
+    Jewelry
+    <br />
+    <input type="checkbox" name="category" value="electronics" />
+    Electronics
+    <br />
+    <input type="checkbox" name="category" value="womens_clothing" />
+    Women's Clothing
+    <br />
+    <h2>Price</h2>
+    <input
+      type="checkbox"
+      name="category"
+      value="mens_clothing"
+      (click)="sortByLowToHigh100()"
+    />
+    Rs.10 to 100
+    <br />
+    <input
+      type="checkbox"
+      name="category"
+      value="jewelery"
+      (click)="sortByLowToHigh300()"
+    />
+    Rs.100 to 300
+    <br />
+    <input
+      type="checkbox"
+      name="category"
+      value="electronics"
+      (click)="sortByLowToHigh500()"
+    />
+    Rs.300 to 500
+    <br />
+    <input
+      type="checkbox"
+      name="category"
+      value="womens_clothing"
+      (click)="sortByLowToHigh1000()"
+    />
+    Rs.500 to 1000
+  </div>
+  <div class="container">
     <tr *ngFor="let mytraProduct of myntraProducts">
-    <div class="item"><img src="{{mytraProduct.image}}" alt="" width="200px" height="220px"></div>
-    <div class="cont">
-       <div class="rate">  {{mytraProduct.rating.rate}} <i class="fas fa-star"></i></div>
-    <h4 class="cate">{{mytraProduct.category}}</h4>
-    <div style="width: 250px;" >{{mytraProduct.title}}</div>
-    <h6 class="pri">RS.{{mytraProduct.price }}</h6>
-</div>
-</tr>
-</div>
+      <div class="item">
+        <img
+          src="{{ mytraProduct.image }}"
+          alt=""
+          width="200px"
+          height="220px"
+        />
+      </div>
+      <div class="cont">
+        <div class="rate">
+          {{ mytraProduct.rating.rate }} <i class="fas fa-star"></i>
+        </div>
+        <h4 class="cate">{{ mytraProduct.category }}</h4>
+        <div style="width: 250px">{{ mytraProduct.title }}</div>
+        <h6 class="pri">
+          RS.{{ mytraProduct.price }}
+          <app-ratings [rating]="mytraProduct.rating.rate"></app-ratings>
+          <div></div>
+        </h6>
+      </div>
+    </tr>
+  </div>
 </div>

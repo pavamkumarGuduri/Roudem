@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PipesComponent } from './pipes.component';
+import { TextareaComponent } from './textarea.component';
 
-describe('PipesComponent', () => {
-  let component: PipesComponent;
-  let fixture: ComponentFixture<PipesComponent>;
+describe('TextareaComponent', () => {
+  let component: TextareaComponent;
+  let fixture: ComponentFixture<TextareaComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PipesComponent ]
+      declarations: [ TextareaComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(PipesComponent);
+    fixture = TestBed.createComponent(TextareaComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

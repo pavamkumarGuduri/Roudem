@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
@@ -10,7 +10,7 @@ import { RectangleComponent } from './rectangle/rectangle.component';
 import { CircleComponent } from './circle/circle.component';
 import { BMIComponent } from './bmi/bmi.component';
 import { DirectivesComponent } from './directives/directives.component';
-import { PipesComponent } from './pipes/pipes.component';
+
 import { EmployeesComponent } from './employees/employees.component';
 import { FlipcartComponent } from './flipcart/flipcart.component';
 import { EmployeesChatComponent } from './employees-chat/employees-chat.component';
@@ -29,6 +29,12 @@ import { CreateStudentIdsComponent } from './create-student-ids/create-student-i
 import { StudentDetailsComponent } from './student-details/student-details.component';
 import { AuthenticationGuard } from './authentication.guard';
 import { UserComponent } from './user/user.component';
+import { NotifyGuard } from './notify.guard';
+import { CreateCompanyComponent } from './create-company/create-company.component';
+import { ParentComponent } from './parent/parent.component';
+import { TextareaComponent } from './textarea/textarea.component';
+import { AboutCompanyComponent } from './about-us/about-company/about-company.component';
+import { ParentItemsComponent } from './parent-items/parent-items.component';
 
 
 const routes: Routes = [
@@ -42,7 +48,7 @@ const routes: Routes = [
   {path:'circle',component:CircleComponent},
   {path:'bmi',component:BMIComponent},  
   {path: 'directives', component:DirectivesComponent},
-  {path:'pipes',component:PipesComponent},
+  
   {path:'employees',component:EmployeesComponent},
   {path:'flipcart',component:FlipcartComponent},
   {path:'employee-chat',component:EmployeesChatComponent},
@@ -62,14 +68,25 @@ const routes: Routes = [
   {path:'create-student-ids',component:CreateStudentIdsComponent},
   {path:'edit-idcards/:id',component:CreateStudentIdsComponent},
   {path:'student-details/:id',component:StudentDetailsComponent},
-  {path:'user',component:UserComponent}
+  {path:'user',canDeactivate:[NotifyGuard], component:UserComponent},
+  {path:'create-company', canDeactivate:[NotifyGuard], component:CreateCompanyComponent},
+  {path:'parent',component:ParentComponent},
+  {path:'textarea',component:TextareaComponent},
+  {path:'about-company',component:AboutCompanyComponent},
+  {
+    path: 'payments',
+    loadChildren: () => import('./payments/payments.module').then(m => m.PaymentsModule)
+  },
+  {path:'parent-items',component:ParentItemsComponent}
 ]},
 
+// {path:'',component:LoginComponent},
+// {path:'**', component:PageNotfoundComponent}
 { path: '', redirectTo: 'login', pathMatch: 'full' } // Add this to redirect to login by default
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,{preloadingStrategy:PreloadAllModules})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

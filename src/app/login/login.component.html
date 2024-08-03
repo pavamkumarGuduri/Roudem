@@ -9,6 +9,15 @@
       <div class="input-group">
         <label for="password">Password</label>
         <input type="password" id="password" formControlName="password" />
+        <div *ngIf="
+            loginForm.get('password')?.touched &&
+            loginForm.get('password')?.invalid
+          ">
+          <p class="Error" *ngIf="loginForm.get('password')?.errors?.['pattern']">
+            password should one upper,lower,special characters and one digit and
+            minimum 8 vharacters a
+          </p>
+        </div>
       </div>
       <button (click)="logIn()">Login</button>
     </form>

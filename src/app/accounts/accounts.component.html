@@ -21,13 +21,13 @@
   <tbody>
     <tr *ngFor="let Account of Accounts">
       <td>{{ Account.account_name }}</td>
-      <td>{{ Account.available_balance }}</td>
+      <td>{{ Account.available_balance | price }}</td>
       <td>{{ Account.account_number }}</td>
       <td>{{ Account.city }}</td>
       <td><img src="{{ Account.profie_picture }}" alt="" width="100px" /></td>
       <td>{{ Account.id }}</td>
       <td>
-        <button routerLink="/dashboard/account-details/{{ Account.id }}" >
+        <button routerLink="/dashboard/account-details/{{ Account.id }}">
           view
         </button>
         <button

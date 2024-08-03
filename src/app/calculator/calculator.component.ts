@@ -11,16 +11,14 @@ export class CalculatorComponent  implements  OnInit{
   public num1: number =0;
   public num2:number=0;
   public result:number=0;
-
+  Catch(value:number){
+    this.result=value;
+  }
   constructor() { }
 
   
 
   ngOnInit(): void {
   }
-  sum(){
-    this.result=this.num1+this.num2;
-  }
 
- 
 }

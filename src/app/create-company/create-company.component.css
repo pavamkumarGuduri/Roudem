@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h1, h2 {
+    color: #333;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group-dm {
+    margin-bottom: 15px;
+    margin-left: 90px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.form-group-dm label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.form-group-dm input[type="text"],
+.form-group-dm input[type="number"],
+.form-group-dm input[type="date"] {
+    width: 60%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.radio-btn {
+    display: flex;
+    align-items: center;
+    margin-left: 100px;
+}
+.radio-btn input[type="radio"] {
+    margin-right: 5px;
+}
+.radio-btn label {
+    margin-right: 20px;
+}
+button{
+    background-color: green;
+    color: black;
+}
+.sub{
+    background-color: blue;
+    color: black;
+    margin-left: 45%;
+    padding: 8px;
+}
+.delete-btn{
+background-color: red;
+color: black;
+padding: 8px;
+margin-left: 25%;
+}
+.Error{
+    color: red;
+    position: relative;
+    top: -20px;
+}

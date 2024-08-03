@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { MyntraService } from '../myntra.service';
 
 @Component({
@@ -8,6 +8,7 @@ import { MyntraService } from '../myntra.service';
 })
 export class MyntraComponent implements OnInit {
 public myntraProducts:any=[];
+// public newProduct:any=0;
 
 
   constructor(private _myntraService:MyntraService) {
@@ -53,5 +54,6 @@ public myntraProducts:any=[];
   // search(category:string){
   //   this.myntraProducts.category = this.myntraProducts.find( mytraProduct:String=> mytraProduct.category.includes("Men's Clothing"));
   // }
+
 
 }

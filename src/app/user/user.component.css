@@ -41,7 +41,7 @@ div {
   button {
     padding: 10px 20px;
     background-color: #007BFF;
-    color: white;
+    color: rgb(5, 4, 4);
     border: none;
     border-radius: 5px;
     font-size: 16px;
@@ -53,4 +53,10 @@ div {
   button:hover {
     background-color: #0056b3;
   }
-  
+  .Error{
+    color: red;
+    margin: 0px;
+  }
+  .add-btn{
+    margin-right: 100px;
+  }

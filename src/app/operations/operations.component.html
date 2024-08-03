@@ -1,0 +1,9 @@
+<p>operations works!</p>
+<p>caluculator first value:{{ Onum1 }}</p>
+<p>caluculator second value:{{ Onum2 }}</p>
+
+<!-- (click)="sum()" -->
+<button [disabled]="!Onum1 || !Onum2" (click)="sum()">sum</button>
+<button>sub</button>
+<button>mul</button>
+<button>div</button>

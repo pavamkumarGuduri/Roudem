@@ -54,4 +54,7 @@
   button:hover {
     background-color: #0056b3;
   }
+  .Error{
+    color: red;
+  }
   
